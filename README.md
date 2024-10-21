@@ -17,6 +17,7 @@ VALUES
 ```
 Make sure that server location in DB matches server location in *_cfg.py file
 5. Edit Dockerfile so bot will run with an argument which matches the beginning of your configuration file. For example, if your configuration file is stub_cfg.py, you should use "stub" as an argument for running bot in Dockerfile
+
 6. Build docker-image and run
 ```
 docker build --tag 'tomodachi_bot' . --network=host
