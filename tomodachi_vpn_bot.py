@@ -72,7 +72,8 @@ def my_keys(message):
     else:
         reply = "Your keys: \n\n"
         for key in user_keys:
-            reply += builders.build_key_description(key) + '\n\n'
+            reply += builders.build_key_description(
+                key, cfg.vpn_location) + '\n\n'
         bot.send_message(
             message.chat.id, reply)
 

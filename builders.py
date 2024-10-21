@@ -40,11 +40,10 @@ def build_download_string():
     )
 
 
-def build_key_description(key):
+def build_key_description(key, location):
     try:
-        # todo fix get_single_server location
         usage_gb = round(tomodachi_outline.get_key_traffic(
-            tomodachi_db.get_single_server('NL'), key[3]) / 1000000000, 2)
+            tomodachi_db.get_single_server(location), key[3]) / 1000000000, 2)
         limit_gb = round(key[7] / 1000000000, 2)
         return (
             f"{key[1]}\n"
